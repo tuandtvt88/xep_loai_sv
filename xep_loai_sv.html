@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h1>Chương trình tính điểm sinh viên</h1>
+<input type="text" id="diemsv" placeholder="Nhập điểm vào đây">
+<button onclick="getdiem()">Xếp loại</button>
+<p id="kq"></p>
+<body>
+</body>
+<script>
+    function getdiem() {
+        let diem = document.getElementById('diemsv').value;
+        if (diem < 5 && diem > 0) {
+            document.getElementById('kq').innerHTML = 'Yếu'
+        } else if (diem >= 5 && diem < 6.5) {
+            document.getElementById('kq').innerHTML = 'Trung bình'
+        } else if (diem >= 6.5 && diem <= 7.9) {
+            document.getElementById('kq').innerHTML = "Khá"
+        } else if (diem >= 8 && diem <= 8.9) {
+            document.getElementById('kq').innerHTML = "Giỏi"
+        } else if (diem >= 9 && diem <= 10) {
+            document.getElementById('kq').innerHTML = "Xuất sắc"
+        } else {
+            document.getElementById('kq').innerHTML = "Bạn nhập điểm sai"
+        }
+    }
+</script>
+</html>

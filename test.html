@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>XẾP LOẠI SINH VIÊN</h1>
+<input type="text" id="getdiem" placeholder="Nhập điểm sinh viên">
+<button onclick="nhapdiem()">Kết quả</button>
+<p id="kq"></p>
+</body>
+<script>
+    function nhapdiem(){
+       let diem = document.getElementById('getdiem').value;
+        if (diem<5 && diem >0){
+            document.getElementById('kq').innerHTML = "Yếu"
+        }
+        else if (diem >=5 && diem < 6.5) {
+            document.getElementById('kq').innerHTML = "Trung bình"
+        }
+        else if (diem >=6.5 && diem < 7.9) {
+            document.getElementById('kq').innerHTML = "Khá"
+        }
+        else if (diem >=8 && diem <= 8.9) {
+            document.getElementById('kq').innerHTML = "Giỏi"
+        }
+        else if (diem >=9 && diem <=10) {
+            document.getElementById('kq').innerHTML = "Xuất sắc"
+        }
+        else {
+            document.getElementById('kq').innerHTML = "Bạn nhập điểm sai"
+        }
+    }
+</script>
+</html>
